@@ -1,0 +1,18 @@
+文本如下:
+icecube@icecube-ThinkPad-E470c:~$ cat file 
+{
+  "host" : "172.16.1.132",
+  "port" : "3306",
+  "database" : "jlmj",
+  "user" : "changchun_mj",
+  "password" : "tyeHF6#76HFbfj0d2jhGDK@23##40HDf"
+}
+
+使用jq命令拼接成mysql -uUser -pPassword -hHOST -dDATABASE形式:
+
+icecube@icecube-ThinkPad-E470c:~$ jq -r '"mysql -u"+.user + " -p"+.password + " -h"+.host +" -D"+.database' file 
+mysql -uchangchun_mj -ptyeHF6#76HFbfj0d2jhGDK@23##40HDf -h172.16.1.132 -Djlmj
+
+
+
+
