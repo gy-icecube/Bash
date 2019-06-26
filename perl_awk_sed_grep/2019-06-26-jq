@@ -12,7 +12,3 @@ icecube@icecube-ThinkPad-E470c:~$ cat file
 
 icecube@icecube-ThinkPad-E470c:~$ jq -r '"mysql -u"+.user + " -p"+.password + " -h"+.host +" -D"+.database' file 
 mysql -uchangchun_mj -ptyeHF6#76HFbfj0d2jhGDK@23##40HDf -h172.16.1.132 -Djlmj
-
-
-
-
